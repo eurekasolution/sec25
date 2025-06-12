@@ -76,3 +76,42 @@ navbar메뉴 밑에 로그인 여부에 따라서 다음과 같이 구성해 줘
 세션을 확인하기 위해 sess 폴더에서 모든 세션을 저장하고 싶어.
 
 여기에다가 site정보를 표시할 때, 본문의 내용이 짧아도, 화면의 맨 아래에 배치하고 싶어.
+
+=======================================================
+
+db에 접속하기 위한 코드를 작성할 거야.
+index.php의 시작에 
+
+include "db.php";
+
+$conn = connectDB();
+
+와 같이 포함시키고 connectDB()를 호출할건데,
+connectDB()는 db.php에 정의해 줘.
+
+db name : kpc
+db user : kpc
+db pass : 1111
+
+mysqli()를 이용해 객체를 생성하고,
+접속이 되면 $conn를 리턴하도록 해 줘.
+
+
+============================================
+
+CREATE TABLE users (
+    idx INT AUTO_INCREMENT PRIMARY KEY,
+    id CHAR(20) UNIQUE NOT NULL,
+    pass CHAR(50) NOT NULL,
+    name CHAR(20) NOT NULL
+);
+
+이렇게 생긴 users 테이블과 비교해 로그인을 시도하는 코드를
+login.php에서 처리하고 싶어.
+
+로그인이 성공하면 세션에 저장하고, 
+alert('성공했습니다.')라고 보여주고, 첫페이지로 이동(index.php)
+
+실패한 경우에는 alert('아이디와 비번을 확인하세요')를 보여주고 첫페이지로 이동
+
+DB와 쿼리할때는 mysqli_query()를 이용해 줘.
