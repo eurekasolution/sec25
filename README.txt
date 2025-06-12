@@ -31,7 +31,7 @@ CREATE TABLE users (
     name CHAR(20) NOT NULL
 );
 
-alter database kpc CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+alter database kpc CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicㅠㅠode_ci;
 alter table kpc CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 
@@ -57,3 +57,22 @@ init.php 파일을 include 하도록 해줘.
 라고 출력해 줘.
 
 이를 만족하는 index.php 파일을 하나 만들어 줘.
+
+================================================
+이 코드를 수정해서
+
+로그인 기능을 만들고 싶어.
+navbar메뉴 밑에 로그인 여부에 따라서 다음과 같이 구성해 줘.
+로그인이 된 경우 :
+    홍길동님 <로그아웃 버튼>
+로그인이 안된 경우 :
+    ID, PW를 입력받는 입력창 <로그인버튼>
+    ID 의 name = name으로 설정
+    PW 의 name = pass로 설정
+
+로그인 버튼을 누르면 : index.php?cmd=login로 이동해서 처리
+로그아웃 버튼을 누르면 : index.php?cmd=logout으로 이동해서 처리
+
+세션을 확인하기 위해 sess 폴더에서 모든 세션을 저장하고 싶어.
+
+여기에다가 site정보를 표시할 때, 본문의 내용이 짧아도, 화면의 맨 아래에 배치하고 싶어.
