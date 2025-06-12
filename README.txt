@@ -31,6 +31,9 @@ CREATE TABLE users (
     name CHAR(20) NOT NULL
 );
 
+alter database kpc CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+alter table kpc CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
 
 insert into users (id, pass, name) values ('admin', 'abcd', '관리자');
 insert into users (id, pass, name) values ('test', 'abcd', '테스트');
