@@ -54,7 +54,7 @@ $conn = connectDB();
     <?php if (isset($_SESSION['username'])): ?>
       <div class="d-flex justify-content-end align-items-center">
         <span class="me-3"><?php echo htmlspecialchars($_SESSION['username']); ?>님</span>
-        <a href="logout.php" class="btn btn-outline-secondary btn-sm">로그아웃</a>
+        <a href="index.php?cmd=logout" class="btn btn-outline-secondary btn-sm">로그아웃</a>
       </div>
     <?php else: ?>
       <form class="d-flex justify-content-end" method="post" action="index.php?cmd=login">

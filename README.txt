@@ -115,3 +115,8 @@ alert('성공했습니다.')라고 보여주고, 첫페이지로 이동(index.ph
 실패한 경우에는 alert('아이디와 비번을 확인하세요')를 보여주고 첫페이지로 이동
 
 DB와 쿼리할때는 mysqli_query()를 이용해 줘.
+
+
+===================
+
+javascript:alert(document.cookie);
