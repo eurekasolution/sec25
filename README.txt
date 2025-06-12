@@ -16,6 +16,25 @@ https:///www.security.org/how-secure-is-my-password/
 w3schools.com
 
 
+회원정보를 위한 users 테이블 mariadb로 만들고 싶어.
+다음과 같은 형태면 좋겠어.
+
+idx : primary key, auto increment,
+id : char(20) unique,
+pass : char(50),
+name : char(20)
+
+CREATE TABLE users (
+    idx INT AUTO_INCREMENT PRIMARY KEY,
+    id CHAR(20) UNIQUE NOT NULL,
+    pass CHAR(50) NOT NULL,
+    name CHAR(20) NOT NULL
+);
+
+
+insert into users (id, pass, name) values ('admin', 'abcd', '관리자');
+insert into users (id, pass, name) values ('test', 'abcd', '테스트');
+
 PHP를 이용해서 홈페이지를 만들고 싶어.
 HTML5와 Bootstrap5를 이용해 반응형으로 만들건데, 다음 조건에 맞게 코드를 작성해 줘.
 
