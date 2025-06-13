@@ -120,3 +120,93 @@ DB와 쿼리할때는 mysqli_query()를 이용해 줘.
 ===================
 
 javascript:alert(document.cookie);
+
+download burp suite
+
+
+=========================
+로그인을 하는데, id, pass가 raw 데이터로 보이는 것을 
+burp suite로 확인할 수 있어.
+이때, 서버에 전달되는 pass는 암호화되서 서버에 전달되고,
+이를 수신한 서버는 복호화해 DB연산을 수행하는 방법을 알고 싶어.
+이를 위해 코드가 어떻게 변경되어야 하는지 알려주.
+
+void test(char *str)
+{
+    char buf[100];
+    strcpy(buf, str);
+    printf("buf = %s\n", buf);
+}
+
+./test hello
+int main(char **argv, int argc)
+{
+    test(argv[1]);
+    return 0;
+}
+
+
+main()
+{
+    a();
+    printf("A\n");
+
+    b();
+    // b
+
+    c();
+    // c
+
+    d();
+    // d
+
+    e();
+    // e
+}
+
+
+for(i = 1; i<=100000000; i++)
+    printf(i);
+a
+b
+
+
+
+
+
+for(1000000000)
+{
+    connect();
+    insert();
+    close();
+}
+
+
+connect();
+for(1000000000)
+{   
+    insert();    
+}
+close();
+
+
+int main()
+{
+    int *ptr;
+
+    ptr = (int *)malloc(sizeof(int) * 1000000000);    
+
+}
+
+
+for($i = 1; $i < 600; $i++)
+{
+    $rand = rand(1, 6);
+    $dice[$rand] ++;
+}
+
+for($i = 1; $i<=6; $i ++)
+{
+
+    echo "$i : $dice[$i]<br>";
+}

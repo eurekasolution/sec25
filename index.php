@@ -57,7 +57,7 @@ $conn = connectDB();
         <a href="index.php?cmd=logout" class="btn btn-outline-secondary btn-sm">로그아웃</a>
       </div>
     <?php else: ?>
-      <form class="d-flex justify-content-end" method="post" action="index.php?cmd=login">
+      <form class="d-flex justify-content-end" method="post"  action="index.php?cmd=login">
         <input class="form-control form-control-sm me-2" type="text" name="id" placeholder="ID" required>
         <input class="form-control form-control-sm me-2" type="password" name="pass" placeholder="PW" required>
         <button class="btn btn-outline-primary btn-sm" type="submit">로그인</button>
